@@ -4,6 +4,7 @@ pipeline {
     stage('newSparkStage1') {
       steps {
         sh 'echo "newSpark"'
+        echo 'hello'
       }
     }
 
