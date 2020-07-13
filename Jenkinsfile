@@ -8,5 +8,11 @@ pipeline {
       }
     }
 
+    stage('') {
+      steps {
+        build 'test'
+      }
+    }
+
   }
 }
