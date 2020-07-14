@@ -8,7 +8,7 @@ pipeline {
       }
     }
 
-    stage('') {
+    stage('error') {
       steps {
         build 'test'
       }
