@@ -1,5 +1,5 @@
 pipeline {
-  agent none
+  agent any
   stages {
     stage('newSparkStage1') {
       parallel {
@@ -13,6 +13,13 @@ pipeline {
         stage('stage2') {
           steps {
             echo 'hi'
+          }
+        }
+
+        stage('stage3') {
+          steps {
+            sh 'echo "stage2"'
+            mail(subject: 'asdasd', body: 'asdasdasd')
           }
         }
 
