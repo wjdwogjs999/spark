@@ -20,8 +20,19 @@ pipeline {
     }
 
     stage('error') {
-      steps {
-        echo 'error'
+      parallel {
+        stage('error') {
+          steps {
+            echo 'error'
+          }
+        }
+
+        stage('success') {
+          steps {
+            echo 'success'
+          }
+        }
+
       }
     }
 
