@@ -1,10 +1,21 @@
 pipeline {
-  agent any
+  agent none
   stages {
     stage('newSparkStage1') {
-      steps {
-        sh 'echo "newSpark"'
-        echo 'hello'
+      parallel {
+        stage('newSparkStage1') {
+          steps {
+            sh 'echo "newSpark"'
+            echo 'hello'
+          }
+        }
+
+        stage('stage2') {
+          steps {
+            echo 'hi'
+          }
+        }
+
       }
     }
 
