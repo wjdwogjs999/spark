@@ -21,7 +21,7 @@ pipeline {
 
     stage('error') {
       steps {
-        build 'test'
+        echo 'error'
       }
     }
 
