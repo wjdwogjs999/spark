@@ -31,6 +31,10 @@ pipeline {
         stage('error') {
           steps {
             echo 'error'
+            retry(count: 2) {
+              sh 'echo "hello"'
+            }
+
           }
         }
 
