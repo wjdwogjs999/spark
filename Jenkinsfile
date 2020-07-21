@@ -41,6 +41,7 @@ pipeline {
         stage('success') {
           steps {
             echo 'success'
+            git 'dasdsadas'
           }
         }
 
