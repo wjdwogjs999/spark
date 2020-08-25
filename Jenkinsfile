@@ -39,6 +39,7 @@ pipeline {
         }
 
         stage('success') {
+          agent any
           steps {
             echo 'success'
             git 'dasdsadas'
