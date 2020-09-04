@@ -49,6 +49,12 @@ pipeline {
       }
     }
 
+    stage('one') {
+      steps {
+        sh 'ecdcfafdasf'
+      }
+    }
+
   }
   environment {
     bodoru = 'value'
