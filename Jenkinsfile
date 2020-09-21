@@ -46,6 +46,12 @@ pipeline {
           }
         }
 
+        stage('czxczxcx') {
+          steps {
+            timeout(time: 23)
+          }
+        }
+
       }
     }
 
